@@ -1,0 +1,7 @@
+alert("User Submitted")
+
+var users_table = $('#users_table');
+
+$('#modal_window').foundation('reveal', 'close');
+
+users_table.empty().append('<%= j render "users" %>')

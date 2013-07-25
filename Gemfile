@@ -7,6 +7,12 @@ gem 'rails', '3.2.13'
 
 gem 'pg'
 gem 'dotenv-rails'
+gem 'pry-rails'
+gem 'pry-debugger'
+gem 'binding_of_caller'
+gem 'meta_request'
+gem 'better_errors'
+gem 'zurb-foundation'
 
 
 # Gems used only for assets and not required

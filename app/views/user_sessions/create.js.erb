@@ -1,0 +1,7 @@
+alert('login submitted!')
+
+var header = $('#header');
+
+$('#modal_window').foundation('reveal', 'close');
+
+header.empty().append('<%= j render "tempheader" %>')

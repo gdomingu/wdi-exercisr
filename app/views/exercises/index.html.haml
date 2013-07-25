@@ -1,0 +1,30 @@
+%h1 Listing exercises
+.button= link_to 'New Exercise', new_exercise_path, :remote => true, :data => {"reveal-id" => "modal_window"}
+%div#navwrapper
+  %div#side-nav.side-nav.large-4.columns
+    - @exercises.each do |exercise|
+      %h3= exercise.activity
+      %div
+        %ul
+          %li
+            Units:
+            = exercise.units
+          %li
+            Value:
+            = exercise.value
+          %li
+            Date Completed:
+            = exercise.completed
+          %li= link_to 'Show', exercise
+          %li= link_to 'Edit', edit_exercise_path(exercise)
+          %li= link_to 'Destroy', exercise, method: :delete, data: { confirm: 'Are you sure?' }
+.row
+
+
+  %select#selectdropdown{:name => "activies"}
+    - @norepexercises.each do |exercise|
+      %option{:value => exercise[0]}
+        = exercise[0]
+  .button.large-4.columns#chartbutton Chart
+
+%div#myfirstchart

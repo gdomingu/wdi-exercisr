@@ -1,0 +1,35 @@
+= form_for @exercise, :remote => true do |f|
+  - if @exercise.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@exercise.errors.count, "error")} prohibited this exercise from being saved:"
+      %ul
+        - @exercise.errors.full_messages.each do |msg|
+          %li= msg
+
+  .large-4.columns.spacer
+  .large-4.columns
+    = f.label :activity
+    = f.text_field :activity
+  .large-4.columns.spacer
+  .row
+  .large-4.columns.spacer
+  .large-4.columns
+    = f.label :units
+    = f.text_field :units
+  .large-4.columns.spacer
+  .row
+  .large-4.columns.spacer
+  .large-4.columns
+    = f.label :value
+    = f.text_field :value
+  .large-4.columns.spacer
+  .row
+  .large-4.columns.spacer
+  .large-4.columns
+    = f.label :completed
+    = f.text_field :completed
+  .large-4.columns.spacer
+  .row
+  .large-4.columns.spacer
+  .actions.large-4.columns
+    = f.submit 'Save'

@@ -1,0 +1,7 @@
+alert('exercise created!')
+
+var navwrapper = $('#navwrapper');
+$('#modal_window').foundation('reveal', 'close');
+
+navwrapper.empty().append('<%= j render "sidenavclone" %>');
+$( "#side-nav" ).accordion();
